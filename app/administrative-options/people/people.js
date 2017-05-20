@@ -5,17 +5,23 @@ angular.module('myApp.people',['ui.router','ngMaterial',])
 .config(['$stateProvider',function($stateProvider)
 {
 	$stateProvider
-	.state('administrative-options.people',
+	.state('people',
 	{
-		name:'administrative-options.people',
+		name:'people',
 		url:'/peoples',
 		templateUrl:'administrative-options/people/people.html',
-		controller:'PeopleCtrl'
+		controller:'PeopleCtrl',
+		controllerAs:'People'
 	})
 
 }])
 
-.controller('PeopleCtrl',[function()
+.controller('PeopleCtrl',['PeopleService',function(PeopleService)
 {
-
+	var people = this;
+	var promise = PeopleService.fetchAllPeopleDetails();
+	promise.then(function(data)
+	{
+		people.details = data;
+	});
 }])

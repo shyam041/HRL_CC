@@ -1,0 +1,16 @@
+[
+  {
+    "EnterpriseId":"shyam.deshpande@accenture.com",
+    "Name":"Shyam Deshpande",
+    "Mobile":"8792302609",
+    "Email":"shyam.deshpande@accenture.com",
+    "CareerLevel":11,
+    "EmploymentType":"Permanent",
+    "DUName":"Digital",
+    "Project":"HRL",
+    "Supervisor":"Amit Chawla",
+    "IsActive":"Active",
+    "AccentureDOJ":"29-08-2016",
+    "ProjectDOJ":"29-30-2017"
+  }
+]

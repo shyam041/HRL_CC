@@ -5,18 +5,28 @@ angular.module('myApp.projects', ['ui.router','ngMaterial'])
 .config(['$stateProvider',function($stateProvider)
 {
 	$stateProvider
-	.state('administrative-options.projects',
+	.state('projects',
 	{
-		name:'administrative-options.projects',
+		name:'projects',
 		url:'/projects',
 		templateUrl:'administrative-options/projects/projects.html',
-		controller:'ProjectCtrl'
+		controller:'ProjectCtrl',
+		controllerAs:'projects'
 	});
 
 }])
-.controller('ProjectCtrl', [function() {
-
+.controller('ProjectCtrl', ['ProjectsService',function(ProjectsService)
+{
+	var projects=this;
+	projects.headers=['DU Name','Project Name','Project Manager'];
+	var promise = ProjectsService.fetchAllProjectsDetails();
+  promise.then(function(data)
+  {
+    projects.details = data;
+  });
+  projects.onEditDu=function(project)
+  {
+    alert(project);
+    console.log(project);
+  }
 }]);
-
-
-

@@ -1,25 +1,16 @@
 /* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.gray{
+  background-color: #4C9EF0;
+  color: white;
 }
+.blue{
+  background-color: #80D8FF;
+  color: white;
 
-.menu:before {
-  content: "[";
 }
-
-.menu:after {
-  content: "]";
+.side-padding{
+  padding: 0 10px;
 }
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.md-toolbar-tools{
+  background-color: #55A0EF;
 }

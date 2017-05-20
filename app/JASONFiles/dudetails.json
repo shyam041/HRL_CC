@@ -1,0 +1,20 @@
+[
+	   {
+	      "DUID":1,
+	      "DUName":"HRL",
+	      "DULeadEID":"Vinu.Varghese",
+	      "DULeadEmail":"Vinu.Varghese@accenture.com"
+	   },
+	   {
+	      "DUID":2,
+	      "DUName":"Procurian",
+	      "DULeadEID":"Vinu.Varghese",
+	      "DULeadEmail":"Vinu.Varghese@accenture.com"
+	   },
+	   {
+	      "DUID":3,
+	      "DUName":"CS Factory",
+	      "DULeadEID":"Vinu.Varghese",
+	      "DULeadEmail":"Vinu.Varghese@accenture.com"
+	   }
+]

@@ -1,1 +1,150 @@
-<p>Data will come from people controller</p>
+<div layout="column">
+		<div layout="row" flex style="border-bottom: 1px solid white;" hide-xs="true">
+			<div class="gray side-padding" flex flex="grow">
+				<h4>Enterprise ID</h4>
+			</div>
+			<div class="gray side-padding" flex flex="grow">
+				<h4>Name</h4>
+			</div>
+			<div class="gray side-padding" flex flex="grow">
+				<h4>Mobile</h4>
+			</div>
+			<div class="gray side-padding" flex="10">
+				<h4>Email</h4>
+			</div>
+			<div class="gray side-padding" flex="10">
+				<h4>Career Level</h4>
+			</div>
+      <div class="gray side-padding" flex="10">
+				<h4>Employment Type</h4>
+			</div>
+      <div class="gray side-padding" flex="10">
+				<h4>DU Name</h4>
+			</div>
+      <div class="gray side-padding" flex="10">
+				<h4>Project</h4>
+			</div>
+      <div class="gray side-padding" flex="10">
+				<h4>Supervisor</h4>
+			</div>
+      <div class="gray side-padding" flex="10">
+				<h4>Is Active </h4>
+			</div>
+      <div class="gray side-padding" flex="10">
+				<h4>AccentureDOJ</h4>
+			</div>
+      <div class="gray side-padding" flex="10">
+				<h4>ProjectDOJ</h4>
+			</div>
+		</div>
+		<div layout="row" layout-wrap flex ng-repeat="people in People.details" style="border-bottom: 1px solid white;">
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Enterprise ID</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+
+				<h5>{{people.EnterpriseId}}</h5>
+			</div>
+
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Name</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.Name}}</h5>
+			</div>
+
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Mobile</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.Mobile}}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Email</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.Email}}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Career Level </h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.CareerLevel }}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Employment Type</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.EmploymentType }}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>DU Name</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.DUName }}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Project</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.Project }}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Supervisor</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.Supervisor }}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Is Active</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.IsActive }}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>AccentureDOJ</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.AccentureDOJ }}</h5>
+			</div>
+
+      <div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>ProjectDOJ</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+				<h5>{{people.ProjectDOJ }}</h5>
+			</div>
+
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4></h4>
+			</div>
+			<div class="blue side-padding" flex="10" flex-xs="50">
+
+				<h5>
+					<md-icon style="color:white" ng-click="DU.onEditDu(detail)">
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					</md-icon>
+				</h5>
+			</div>
+			<div class="gray side-padding" flex flex="grow" hide-gt-xs="true">
+				<h4>DU Lead Name</h4>
+			</div>
+			<div class="blue side-padding" flex="10" flex-xs="50">
+
+				<h5>
+				<md-icon style="color:white" ng-click="DU.onEditDu(detail)">
+					<i class="fa fa-trash-o" aria-hidden="true"></i>
+				</md-icon>
+				</h5>
+			</div>
+		</div>
+
+</div>

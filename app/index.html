@@ -17,40 +17,123 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <md-content class="md-padding">
-    <md-nav-bar
-      md-selected-nav-item="currentNavItem"
-      nav-bar-aria-label="navigation links">
-      <md-nav-item md-nav-sref="administrative-options" name="page1">
-        Administrative Options
-      </md-nav-item>
-      <md-nav-item md-nav-sref="user-options" name="page2">
-        User Options
-      </md-nav-item>
-      <md-nav-item md-nav-sref="reports" name="page3">
-        Reports
-      </md-nav-item>
-      <!-- these require actual routing with ui-router or ng-route, so they
-      won't work in the demo
-      <md-nav-item md-nav-href="#page4" name="page5">Page Four</md-nav-item>
-      <md-nav-item md-nav-sref="app.page5" name="page4">Page Five</md-nav-item>
-      You can also add options for the <code>ui-sref-opts</code> attribute.
-      <md-nav-item md-nav-sref="page6" sref-opts="{reload:true, notify:true}">
-        Page Six
-      </md-nav-item>
-      -->
-    </md-nav-bar>
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+<div layout="column" flex-wrap>
+  <div flex class="blue">
+    <md-toolbar class="md-theme-indigo">
+    <div class="md-toolbar-tools">
+        <h2>HRL Connect</h2>
 
-  <div ui-view></div>
+      <md-button  style="color:white">
 
-  <!--<div>Angular seed app: v<span app-version></span></div>-->
+          <i class="fa fa-home" aria-hidden="true"></i>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+        Dashboard
+      </md-button>
+      <md-button  style="color:white">
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        Add connect
+      </md-button>
+      <span style="flex-grow:1">
+      </span>
+      <md-menu-bar>
+      <md-menu>
+        <md-button aria-label="label" style="color:white;" ng-click="$mdMenu.open()">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          Punith Jain
+        </md-button>
+        <md-menu-content width="4" ng-mouseleave="$mdMenu.close()">
+          <md-menu-item ng-repeat="item in [1]">
+            <md-button>
+              Option {{item}}
+            </md-button>
+          </md-menu-item>
+      </md-menu>
+    </md-menu-bar>
+    </div>
+    </md-toolbar>
+  </div>
+  <div layout="row" flex layout-padding>
+    <div  flex="20" flex-md="25" hide-sm="true" hide-xs="true">
+      <md-content>
+        <md-list>
+          <!-- <md-subheader class="md-no-sticky">Avatar with Secondary Action Icon</md-subheader> -->
+
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+              <i class="fa fa-th-large" aria-hidden="true"></i>
+            </md-icon>
+            <p>Administrative Options</p>
+            <md-icon class="md-secondary" aria-label="Chat" ng-click = "showAdminDropdown = !showAdminDropdown">
+        		    <i class="fa fa-chevron-right" ng-show="!showAdminDropdown"></i>
+        		    <i class="fa fa-chevron-down" ng-show="showAdminDropdown"></i>
+        	  </md-icon>
+          </md-list-item>
+        </md-list>
+        <md-divider></md-divider>
+        <md-list ng-show="showAdminDropdown">
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+            </md-icon>
+            <p ui-sref="delivery-units">Delivery Units</p>
+          </md-list-item>
+
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+            </md-icon>
+            <p ui-sref="projects">Projects</p>
+          </md-list-item>
+
+
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+            </md-icon>
+            <p ui-sref="people">People</p>
+          </md-list-item>
+        </md-list>
+        <md-divider></md-divider>
+        <!-- User options-->
+        <md-list>
+          <!-- <md-subheader class="md-no-sticky">Avatar with Secondary Action Icon</md-subheader> -->
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </md-icon>
+            <p>User Options</p>
+            <md-icon class="md-secondary" aria-label="Chat" ng-click = "showUserDropdown = !showUserDropdown">
+        		    <i class="fa fa-chevron-right" ng-show="!showUserDropdown"></i>
+        		    <i class="fa fa-chevron-down" ng-show="showUserDropdown"></i>
+        	  </md-icon>
+          </md-list-item>
+        </md-list>
+        <md-divider></md-divider>
+        <md-list ng-show="showUserDropdown">
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+            </md-icon>
+            <p ui-sref="#">Add Connect</p>
+          </md-list-item>
+
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+            </md-icon>
+            <p>My Connects</p>
+          </md-list-item>
+
+          <md-list-item class="noright">
+            <md-icon class="md-primary" aria-label="Chat">
+            </md-icon>
+            <p>Connects I Have Done</p>
+          </md-list-item>
+        </md-list>
+      </md-content>
+
+    </div>
+    <div flex="80"  flex-md="75" flex-sm="100"  flex-xs="100">
+      <div ui-view></div>
+    </div>
+  </div>
+</div>
+
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -66,6 +149,9 @@
   <script src="administrative-options/projects/projects.js"></script>
   <script src="administrative-options/people/people.js"></script>
   <script src="reports/reports.js"></script>
+  <script src="services/administrative-options/delivery-units/delivery-units.js"></script>
+  <script src="services/administrative-options/projects/projects.js"></script>
+  <script src="services/administrative-options/people/people.js"></script>
 
 
   <script src="user-options/user-options.js"></script>

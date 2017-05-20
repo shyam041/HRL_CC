@@ -1,1 +1,99 @@
-<P>Projects Data will come here  from controller</P>
+<div layout="column">
+	<!-- <md-grid-list
+        md-cols-xs="1" md-cols-sm="2" md-cols-md="4" md-cols-gt-md="5"
+        md-row-height-gt-md="1:0.25" md-row-height="2:2"
+        md-gutter="5px" md-gutter-gt-sm="2px" >
+
+    <md-grid-tile class="gray" ng-repeat="headers in DU.headers">
+        <h3>{{headers}}</h3>
+    </md-grid-tile>
+
+  </md-grid-list>
+	<md-grid-list
+		md-cols-xs="1" md-cols-sm="2" md-cols-md="5" md-cols-gt-md="5"
+		md-row-height-gt-md="1:0.25" md-row-height="2:2"
+		md-gutter="5px" md-gutter-gt-sm="2px" ng-repeat="detail in DU.details">
+
+		<md-grid-tile class="blue">
+				<p>{{detail.DUName}}</p>
+		</md-grid-tile>
+		<md-grid-tile class="blue">
+				<p>{{detail.DULeadEID}}</p>
+		</md-grid-tile>
+		<md-grid-tile class="blue">
+				<p>{{detail.DULeadEmail}}</p>
+		</md-grid-tile>
+		<md-grid-tile class="blue">
+				<md-button class="md-raised" ng-click="DU.onEditDu(detail)">
+				<i class="fa fa-cube" aria-hidden="true"></i></md-button>
+		</md-grid-tile>
+		<md-grid-tile class="blue">
+				<md-button class="md-raised" ng-click="DU.onDeleteDu(detail)">
+				<i class="fa fa-cube" aria-hidden="true"></i></md-button>
+		</md-grid-tile>
+
+	</md-grid-list> -->
+		<div layout="row" flex style="border-bottom: 1px solid white;" hide-xs="true">
+			<div class="gray side-padding" flex flex="grow">
+				<h4>DU</h4>
+			</div>
+			<div class="gray side-padding" flex flex="grow">
+				<h4>Project</h4>
+			</div>
+			<div class="gray side-padding" flex flex="grow">
+				<h4>Project Manager</h4>
+			</div>
+			<div class="gray side-padding" flex="10">
+				<h4>Edit</h4>
+			</div>
+			<div class="gray side-padding" flex="10">
+				<h4>Delete</h4>
+			</div>
+		</div>
+		<div layout="row" layout-wrap flex ng-repeat="project in projects.details" style="border-bottom: 1px solid white;">
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>DU</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+
+				<h5>{{project.DUName}}</h5>
+			</div>
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Project</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+
+				<h5>{{project.ProjectName}}</h5>
+			</div>
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Project Manager</h4>
+			</div>
+			<div class="blue side-padding" flex flex-xs="50">
+
+				<h5>{{project.ProjectManager}}</h5>
+			</div>
+			<div class="gray side-padding" flex flex-xs="50" hide-gt-xs="true">
+				<h4>Edit</h4>
+			</div>
+			<div class="blue side-padding" flex="10" flex-xs="50">
+
+				<h5>
+					<md-icon style="color:white" ng-click="DU.onEditDu(detail)">
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					</md-icon>
+				</h5>
+			</div>
+			<div class="gray side-padding" flex flex="grow" hide-gt-xs="true">
+				<h4>Delete</h4>
+			</div>
+			<div class="blue side-padding" flex="10" flex-xs="50">
+
+				<h5>
+				<md-icon style="color:white" ng-click="DU.onEditDu(detail)">
+					<i class="fa fa-trash-o" aria-hidden="true"></i>
+				</md-icon>
+				</h5>
+			</div>
+		</div>
+
+</div>
